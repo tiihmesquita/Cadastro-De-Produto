@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Produto } from '../produtos';
-import { PRODUTOS } from '../mock';
+import { DevolveProdService } from '../devolve-prod.service';
 
 @Component({
   selector: 'app-listar',
@@ -9,13 +9,22 @@ import { PRODUTOS } from '../mock';
 })
 export class ListarComponent implements OnInit {
 
-  produtos = PRODUTOS;
-  
+  produtos: Produto[] = [];
 
 
-  constructor() { }
 
-  ngOnInit(): void {
+  constructor(private devolveProdService: DevolveProdService) { }
+
+  getProdutos(): void{
+
+  this.devolveProdService.getProdutos()
+     .subscribe(produtos => this.produtos = produtos);
+
   }
+  ngOnInit(): void{
+    this.getProdutos();
+  }
+
+  
 
 }
