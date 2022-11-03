@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Produto } from '../produtos';
 import { DevolveProdService } from '../devolve-prod.service';
+import { PRODUTOS } from '../mock';
 
 @Component({
   selector: 'app-listar',
@@ -10,6 +11,7 @@ import { DevolveProdService } from '../devolve-prod.service';
 export class ListarComponent implements OnInit {
 
   produtos: Produto[] = [];
+  selectedProd?: Produto;
 
 
 
@@ -24,7 +26,10 @@ export class ListarComponent implements OnInit {
   ngOnInit(): void{
     this.getProdutos();
   }
-
+  
+    onSelect(teste: Produto):void{
+      this.selectedProd = teste;
+    }
+  }
   
 
-}

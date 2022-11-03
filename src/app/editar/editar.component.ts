@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Produto } from '../produtos';
 
 @Component({
   selector: 'app-editar',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./editar.component.css']
 })
 export class EditarComponent implements OnInit {
-
+@Input() selectedProd?: Produto;
   constructor() { }
 
   ngOnInit(): void {
