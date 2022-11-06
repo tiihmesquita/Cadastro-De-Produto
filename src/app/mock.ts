@@ -8,7 +8,7 @@ export const PRODUTOS: Produto[] = [
     {id: 4, nome: 'hillux', cor: 'preta', preco: 80000, material: 'ferro'},
     {id: 5, nome: 'saveiro', cor: 'preta', preco: 55000, material: 'aco'},
     {id: 6, nome: 'toro', cor: 'azul', preco: 60000, material: 'aluminio'},
-    {id: 7, nome: 'eco-sport', cor: 'dourada', preco: 50000, material: 'aco'},
+    {id: 7, nome: 'esportage', cor: 'dourada', preco: 50000, material: 'aco'},
     {id: 8, nome: 'corsa', cor: 'cinza', preco: 25000, material: 'ferro'},
     {id: 9, nome: 'celta', cor: 'prata', preco: 25000, material: 'aluminio'},
     {id: 10, nome: 'uno', cor: 'branco', preco: 27000, material: 'ferro'}

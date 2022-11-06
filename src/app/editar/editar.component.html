@@ -1,12 +1,20 @@
 <div *ngIf="selectedProd">
     <h2>Editar produto:</h2>
-    <h2>Modelo:{{selectedProd.nome}} Valor: R${{selectedProd.preco}}</h2>
-    <div>
+    <h2>Modelo:{{selectedProd.nome}} </h2>
+    <h2>Valor: R${{selectedProd.preco}}</h2>
+    <div class="labe">
+        <div class = "modelos">
         <label>Modelo:</label>
+        <div>
         <input id = "nome" [(ngModel)] = "selectedProd.nome" placeholder="nome">
+    </div>
+        </div>
+        <div>
         <label>Preço:</label>
+        <div>
         <input id = "preco" [(ngModel)] = "selectedProd.preco" placeholder="preco">
-
+    </div>
+    </div>
     </div>
 
 </div>
